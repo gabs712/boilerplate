@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@layer base {
+  * {
+    word-break: break-word;
+  }
+}
