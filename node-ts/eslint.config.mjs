@@ -1,10 +1,15 @@
+import tseslint from '@typescript-eslint/eslint-plugin'
+import tsparser from '@typescript-eslint/parser'
+
 export default [
   { ignores: ['dist'] },
   {
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-empty': 'warn',
-      'no-fallthrough': 'off',
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+    },
+    plugins: {
+      '@typescript-eslint': tseslint,
     },
   },
 ]
